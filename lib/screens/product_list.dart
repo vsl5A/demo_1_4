@@ -36,10 +36,10 @@ class _HomePageState extends State<ProductList> {
   void initState() {
     super.initState();
     _cubit = context.read<ProductCubit>();
-    _fetchAllData();
+    _fetchInitData();
   }
 
-  Future<void> _fetchAllData() async {
+  Future<void> _fetchInitData() async {
     await _cubit.fetchProducts( isNeedLoadCategories: true, skip: 0);
   }
 
